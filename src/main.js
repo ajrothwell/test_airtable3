@@ -18,13 +18,15 @@ import pinboard from '@phila/pinboard/src/main.js';
 // data-sources
 import datapoints from './data-sources/datapoints';
 
+import customCss from './custom-css.css';
+
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
 
 import expandCollapseContent from './components/ExpandCollapseContent.vue';
-// import customGreeting from './components/customGreeting.vue';
+import customGreeting from './components/customGreeting.vue';
 const customComps = {
   'expandCollapseContent': expandCollapseContent,
-//   'customGreeting': customGreeting,
+  'customGreeting': customGreeting,
 };
 
 pinboard({
@@ -70,7 +72,7 @@ pinboard({
     subtitle: 'subtitle test site',
   },
   comboSearch: {
-    dropdown: [ 'address' ],
+    dropdown: [ 'keyword' ],
   },
   locationInfo: {
     siteName: function(item) {
@@ -98,7 +100,7 @@ pinboard({
   // },
   markerType: 'circle-marker',
   circleMarkers:{
-    color: '#FF9D14',
+    color: '#fc603d',
     weight: 0,
     radius: 8,
     mobileRadius: 12,

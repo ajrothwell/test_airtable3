@@ -1,70 +1,29 @@
 <template>
-  <div class="grid-x grid-padding-x">
+  <div class="grid-y grid-padding-y">
     <div class="cell medium-12">
-      <!-- v-if="item.attributes.address" -->
       <div
         v-if="address"
-        class="grid-x detail"
+        class="grid-y detail"
       >
         <div class="small-2">
           <font-awesome-icon icon="map-marker-alt" />
         </div>
         <div class="small-22">
-          <!-- {{ item.attributes.address }}<br> -->
           {{ address }}<br>
-          <!-- Philadelphila, PA {{ item.attributes.ZIP2 }} -->
           Philadelphila, PA {{ zipcode }}
         </div>
       </div>
+      <div class="small-22">
+        tags: {{ item.tags }}
+      </div>
     </div>
+
 
     <img
       :src="getAttachments(item)"
       class="the-img"
     >
 
-    <!-- <div class="cell medium-12">
-      <div
-        v-if="item.attributes.CATEGORY"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="hand-holding-heart" />
-        </div>
-        <div
-          class="small-22"
-          v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')"
-        />
-      </div>
-
-      <div
-        v-if="item.attributes.phone_number"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="phone" />
-        </div>
-        <div class="small-22">
-          {{ item.attributes.phone_number }}
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div
-      v-if="item.attributes.TEMPCLOSE !== null"
-      class="grid-x temp-close-section"
-    >
-      <div class="card-exclamation-holder small-5">
-        <font-awesome-icon
-          icon="exclamation-triangle"
-          class="fa-2x fa-icon-class"
-        />
-      </div>
-      <div class="grid-y card-exclamation-details small-19">
-        <div><b>{{ $t('change') }}:</b></div>
-        <div>{{ $t('closure') }}: {{ transforms.toLocaleDateString.transform(item.attributes.TEMPCLOSE) }}</div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -107,9 +66,9 @@ export default {
   },
   methods: {
     getAttachments(item) {
-      console.log('in getAttachments, item:', item);
+      // console.log('in getAttachments, item:', item);
       if (item.Attachments) {
-        console.log('in getAttachments, item.Attachments[0]:', item.Attachments[0]);
+        // console.log('in getAttachments, item.Attachments[0]:', item.Attachments[0]);
         return item.Attachments[0].url;
       }
     },
@@ -139,7 +98,7 @@ export default {
 <style lang="scss">
 
 .the-img {
-  height: 90px;
+  width: 90px;
 }
 
 .location-item {
