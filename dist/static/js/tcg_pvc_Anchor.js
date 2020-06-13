@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["tcg_pvc_Anchor"],{a3f2:function(t,s,o){"use strict";o.r(s);var e=function(){var t=this,s=t.$createElement,o=t._self._c||s;return o("a",{style:this.$props.options.customStyle,attrs:{target:"_"+this.$props.options.target,href:this.$props.options.href},domProps:{innerHTML:t._s(this.$props.options.text)}})},n=[],r=o("0524"),p={mixins:[r["a"]],computed:{test:function(){return"test"}}},i=p,c=o("2877"),a=Object(c["a"])(i,e,n,!1,null,null,null);s["default"]=a.exports}}]);
+//# sourceMappingURL=tcg_pvc_Anchor.js.map
