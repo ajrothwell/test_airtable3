@@ -1,6 +1,6 @@
 module.exports = {
   filenameHashing: false,
-  publicPath: '/',
+  publicPath: '/test_airtable3/dist/',
   chainWebpack: (config) => {
     config.resolve.symlinks(false);
   },
