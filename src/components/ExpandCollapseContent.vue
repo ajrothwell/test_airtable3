@@ -1,11 +1,25 @@
 <template>
   <div class="grid-y grid-padding-y">
     <div class="cell medium-12">
+      <div class="small-22">
+        <div
+          v-if="item.category_type === 'incomplete'"
+          class="status-text red"
+        >
+          {{ item.category_type }}
+        </div>
+        <div
+          v-if="item.category_type === 'complete'"
+          class="status-text"
+        >
+          {{ item.category_type }}
+        </div>
+      </div>
       <div
         v-if="address"
-        class="grid-y detail"
+        class="grid-x detail"
       >
-        <div class="small-2">
+        <div class="small-1">
           <font-awesome-icon icon="map-marker-alt" />
         </div>
         <div class="small-22">
@@ -96,6 +110,14 @@ export default {
 </script>
 
 <style lang="scss">
+
+.red {
+  color: #fc603d;
+}
+
+.status-text {
+  font-size: 20px;
+}
 
 .the-img {
   width: 90px;
